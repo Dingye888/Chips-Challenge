@@ -41,7 +41,8 @@ public class PersistenceValidTests {
 	 */
 	@Test
 	public void test_time() {
-		assertTrue("The game time should be 30, but its " + praser.time, praser.time == 30);
+		assertTrue(praser.time == 30,
+				"The game time should be 30, but its " + praser.time);
 	}
 
 	/**
@@ -49,7 +50,7 @@ public class PersistenceValidTests {
 	 */
 	@Test
 	public void test_level() {
-		assertTrue("The game level should be 1, but its " + praser.currLevel, praser.currLevel == 1);
+		assertTrue(praser.currLevel == 1, "The game level should be 1, but its " + praser.currLevel);
 	}
 
 	/**
@@ -62,8 +63,8 @@ public class PersistenceValidTests {
 		assertTrue(loc[r][c].getActor() != null);
 		assertTrue(loc[r][c].getTile() == null);
 		Chap a = (Chap) loc[r][c].getActor();
-		assertTrue("The size of chaps current inventory is " + a.getInventory().size() + ", But should be 2",
-				a.getInventory().size() == 2);
+		assertTrue(a.getInventory().size() == 2,
+				"The size of chaps current inventory is " + a.getInventory().size() + ", But should be 2");
 	}
 
 	/**
@@ -76,7 +77,7 @@ public class PersistenceValidTests {
 		assertTrue(loc[r][c].getActor() != null);
 		assertTrue(loc[r][c].getTile() == null);
 		Chap a = (Chap) loc[r][c].getActor();
-		assertTrue("Chap currently have " + a.getChips() + " Chips collected, he should have 9", a.getChips() == 9);
+		assertTrue(a.getChips() == 9, "Chap currently have " + a.getChips() + " Chips collected, he should have 9");
 
 	}
 
@@ -312,8 +313,8 @@ public class PersistenceValidTests {
 		SaveGame s = new SaveGame(m, 1);
 		s.save("SavedMap.json", 30);
 		praser = new Parser("levels/SavedMap.json");
-		assertTrue("The current location should have Chap but it has " + praser.map[0][0].getActor(),
-				praser.map[0][0].getActor() != null);
+		assertTrue(praser.map[0][0].getActor() != null,
+				"The current location should have Chap but it has " + praser.map[0][0].getActor());
 	}
 
 }

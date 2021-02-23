@@ -75,37 +75,6 @@ public class ApplicationTest {
 	}
 	
 	@Test
-	public void Pause_test() throws Exception, InstantiationException, IllegalAccessException{
-		Main m = new Main();
-		GameController gc = m.getGameController();
-;
-		gc.startLevel1();
-		gc.pause(); 
-		
-	    Timer t = gc.getInfoRenderer().getTimer();
-		
-		assertTrue(t.isRunning());
-	}
-	
-	@Test
-	public void TimeOut_test() throws Exception, InstantiationException, IllegalAccessException{
-		Main m = new Main();
-		GameController gc = m.getGameController();
-		GameInfoView gv = m.getGameInfoView();
-		
-		gc.startLevel1();
-		//GameInfoModel model = gc.getGameInfoModel();
-		//gv.setTimeText("0");
-	    
-	    //model.setTime(0);
-		//gc.getGameInfoRenderer().render(model);
-		Timer t = gc.getInfoRenderer().getTimer();
-		Thread.sleep(100000);
-		assertFalse(t.isRunning());
-		assertTrue(gc.getGameStatus().equals(GameStatus.LEVEL_FINISHED));
-	}
-	
-	@Test
 	public void keyPressed_Dir() throws Exception, InstantiationException, IllegalAccessException{
 		Main m = new Main();
 		GameController gc = m.getGameController();
