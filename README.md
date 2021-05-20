@@ -30,4 +30,6 @@ Gameplay logic
 
 4.Bug enemys will act on their own and will kill you, Avoid them!
 
+![chip](chips_challange.JPG)
 ![chip](bugs.JPG)
+
