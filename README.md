@@ -29,3 +29,5 @@ Gameplay logic
 3.Lava tile will cause you to die, be careful!
 
 4.Bug enemys will act on their own and will kill you, Avoid them!
+
+![chip](bugs.JPG)
